@@ -1,0 +1,37 @@
+{
+  "get": "history",
+  "parameters": {
+    "country": "usa",
+    "day": "2020-06-02"
+  },
+  "errors": [
+
+  ],
+  "results": 48,
+  "response": [
+    {
+      "continent": "North-America",
+      "country": "USA",
+      "population": 330843477,
+      "cases": {
+        "new": "+21829",
+        "active": 1136777,
+        "critical": 16947,
+        "recovered": 615301,
+        "1M_pop": "5619",
+        "total": 1858999
+      },
+      "deaths": {
+        "new": "+726",
+        "1M_pop": "323",
+        "total": 106921
+      },
+      "tests": {
+        "1M_pop": "54856",
+        "total": 18148683
+      },
+      "day": "2020-06-02",
+      "time": "2020-06-02T00:00:05+00:00"
+    }
+  ]
+}

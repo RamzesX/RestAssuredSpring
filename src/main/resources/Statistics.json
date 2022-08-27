@@ -1,0 +1,36 @@
+{
+  "get": "statistics",
+  "parameters": [
+
+  ],
+  "errors": [
+
+  ],
+  "results": 242,
+  "response": [
+    {
+      "continent": "Africa",
+      "country": "Guinea",
+      "population": 13883845,
+      "cases": {
+        "new": "+41",
+        "active": 260,
+        "critical": 8,
+        "recovered": 36763,
+        "1M_pop": "2699",
+        "total": 37470
+      },
+      "deaths": {
+        "new": "+2",
+        "1M_pop": "32",
+        "total": 447
+      },
+      "tests": {
+        "1M_pop": "47545",
+        "total": 660107
+      },
+      "day": "2022-08-14",
+      "time": "2022-08-14T23:45:05+00:00"
+    }
+  ]
+}

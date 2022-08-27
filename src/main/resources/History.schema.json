@@ -1,0 +1,137 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "get": {
+      "type": "string"
+    },
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "country": {
+          "type": "string"
+        },
+        "day": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "country"
+      ]
+    },
+    "errors": {
+      "type": "array",
+      "items": {}
+    },
+    "results": {
+      "type": "integer"
+    },
+    "response": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "continent": {
+              "type": "string"
+            },
+            "country": {
+              "type": "string"
+            },
+            "population": {
+              "type": "integer"
+            },
+            "cases": {
+              "type": "object",
+              "properties": {
+                "new": {
+                  "type": "string"
+                },
+                "active": {
+                  "type": "integer"
+                },
+                "critical": {
+                  "type": "integer"
+                },
+                "recovered": {
+                  "type": "integer"
+                },
+                "1M_pop": {
+                  "type": "string"
+                },
+                "total": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "new",
+                "active",
+                "critical",
+                "recovered",
+                "1M_pop",
+                "total"
+              ]
+            },
+            "deaths": {
+              "type": "object",
+              "properties": {
+                "new": {
+                  "type": "string"
+                },
+                "1M_pop": {
+                  "type": "string"
+                },
+                "total": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "new",
+                "1M_pop",
+                "total"
+              ]
+            },
+            "tests": {
+              "type": "object",
+              "properties": {
+                "1M_pop": {
+                  "type": "string"
+                },
+                "total": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "1M_pop",
+                "total"
+              ]
+            },
+            "day": {
+              "type": "string"
+            },
+            "time": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "continent",
+            "country",
+            "population",
+            "cases",
+            "deaths",
+            "tests",
+            "day",
+            "time"
+          ]
+        }
+      ]
+    }
+  },
+  "required": [
+    "get",
+    "parameters",
+    "errors",
+    "results",
+    "response"
+  ]
+}
