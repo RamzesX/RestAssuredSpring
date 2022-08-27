@@ -1,13 +1,14 @@
+package definitions;
+
 import TestApps.RestAssured.api.GetCountries;
 import TestApps.RestAssured.api.GetHistory;
 import TestApps.RestAssured.api.GetStatistics;
-import com.fasterxml.jackson.core.JsonProcessingException;
 import org.springframework.beans.factory.annotation.Autowired;
+
+import io.cucumber.java.en.Given;
 import org.testng.Assert;
-import org.testng.annotations.Test;
 
-
-public class RestTests extends BaseTest {
+public class SharedStateSteps {
     @Autowired
     private GetHistory getHistory;
     @Autowired
@@ -17,18 +18,13 @@ public class RestTests extends BaseTest {
 
     int firstResult;
 
-
-    @Test
-    public void firstCallOnSharedState() throws JsonProcessingException {
+    @Given("CheckInitialValueOfSharedState")
+    public void checkInitialState() {
         firstResult = getStatistics.checkSharedState();
     }
 
-    @Test
-    public void secondCallOnSharedState() throws JsonProcessingException {
+    @Given("CheckSharedStateValueAfterChange")
+    public void checkStateAfterChange() {
         Assert.assertNotEquals(firstResult, getStatistics.checkSharedState());
-    }
-
-    @Test public void checkListOfStatistics() throws JsonProcessingException {
-        Assert.assertNotNull(getStatistics.getList(getStatistics.getResponse()));
     }
 }
